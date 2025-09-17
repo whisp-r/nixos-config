@@ -15,7 +15,15 @@
     p7zip # 7z
 
     neovim # not configured via NixOS or home-manager
+
+    # Astronvim requirements:
     nerd-fonts.jetbrains-mono
+    ripgrep # live grep file search (<Leader>fw)
+    # lazygit # git ui toggle terminal (<Leader>tl or <Leader>gg)
+    gdu # disk usage toggle terminal (<Leader>tu)
+    bottom # process viewer toggle terminal (<Leader>tt)
+    python314 # python repl toggle terminal (<Leader>tp)
+    nodejs_24 # is needed for a lot of the LSPs, and for the node repl toggle terminal (<Leader>tn)
 
     # rust stuff
     rustc
