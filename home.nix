@@ -15,9 +15,12 @@
     p7zip # 7z
 
     neovim # not configured via NixOS or home-manager
+    
+    nerd-fonts.jetbrains-mono
+    fragment-mono
+    
 
     # Astronvim requirements:
-    nerd-fonts.jetbrains-mono
     ripgrep # live grep file search (<Leader>fw)
     # lazygit # git ui toggle terminal (<Leader>tl or <Leader>gg)
     gdu # disk usage toggle terminal (<Leader>tu)
@@ -25,7 +28,6 @@
     python314 # python repl toggle terminal (<Leader>tp)
     nodejs_24 # is needed for a lot of the LSPs, and for the node repl toggle terminal (<Leader>tn)
 
-    # rust stuff
     rustc
     cargo
     rust-analyzer
@@ -36,6 +38,7 @@
   ];
 
   # More DEEP-CONFIGURATION apps should be defined here
+
   # alacritty - a cross-platform, GPU-accelerated terminal emulator
   programs.alacritty = { enable = true; };
 
@@ -112,7 +115,7 @@
       theme = "alanpeabody";
     };
 
-    history.size = 5000;
+    history.size = 10000;
   };
 
   # Nicely reload system units when changing configs

@@ -59,7 +59,7 @@
     theme = "breeze";
   };
 
-  # ZSH
+  # ZSH (has to be enabled here for home manager, error explanation)
   programs.zsh.enable = true;
 
   # Configure keymap in X11
