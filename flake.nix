@@ -1,5 +1,5 @@
 {
-  description = "Main machine flake by whiisper";
+  description = "Flake by whisp-r";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.05";
@@ -18,25 +18,35 @@
   };
 
   outputs =
-    input@{ nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, ... }:
+    inputs@{ nixpkgs, nixpkgs-unstable, home-manager, plasma-manager, ... }:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs { inherit system; };
       unstable = import nixpkgs-unstable { inherit system; };
-    in
-    {
+    in {
       nixosConfigurations = {
-        whitefatalis = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit unstable; };
+        whitefatalis = let
+          username = "whiisper";
+          specialArgs = {
+            inherit username;
+            inherit unstable;
+          };
+        in nixpkgs.lib.nixosSystem {
+          inherit specialArgs;
           modules = [
-
-            ./configuration.nix
+            ./hosts/white-fatalis
+            # ./users/${username}/nixos.nix
 
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.extraSpecialArgs = { inherit unstable; };
+
+              # home-manager.extraSpecialArgs = inputs // specialArgs;
+              home-manager.extraSpecialArgs = {
+                inherit username;
+                inherit unstable;
+              };
 
               # fixes some error with home-manager-gen service
               home-manager.backupFileExtension = "backup";
@@ -46,7 +56,8 @@
                 [ plasma-manager.homeModules.plasma-manager ];
 
               # this should point to the home.nix file
-              home-manager.users.whiisper = import ./home.nix;
+              home-manager.users.${username} =
+                import ./users/${username}/home.nix;
             }
           ];
         };
