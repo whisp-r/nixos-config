@@ -32,7 +32,7 @@
             shrieking-legiana = let
                 hostnameNew = "shrieking-legiana";
                 username = "whiisper";
-            in nixpgs.lib.nixosSystem {
+            in nixpkgs.lib.nixosSystem {
                 specialArgs = {
                     inherit inputs; inherit username;
                 };
