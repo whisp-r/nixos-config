@@ -1,12 +1,16 @@
 { config, pkgs, ... }:
 
 {
-  programs.firefox = {
-    enable = true;
-    preferences = {
-      "widget.use-xdg-desktop-portal.file-picker" = 1;
+  programs = {
+    firefox = {
+      enable = true;
+      preferences = {
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+      };
     };
-  };
+    thunderbird.enable = true;
+    localsend.enable = true;
+};
 
   environment.systemPackages = with pkgs; [
     wayland-utils
