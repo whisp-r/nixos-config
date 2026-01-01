@@ -4,22 +4,33 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = { 
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
+    { self, nixpkgs, home-manager, ... }@inputs:
+    let
+      username = "whiisper";
+      homeManagerModuleCommon = {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.users.${username} = ./home.nix;
+      };
+    in
     {
       nixosConfigurations = {
 
         black-fatalis =
           let
             hostnameNew = "black-fatalis";
-            username = "whiisper";
+            # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              inherit inputs;
-              inherit username;
+              inherit inputs username;
             };
 
             modules = [
@@ -29,18 +40,19 @@
               (./. + "/${hostnameNew}/hardware-configuration.nix")
               (./. + "/${hostnameNew}/configuration.nix")
               (./. + "/${hostnameNew}/base.nix")
+
+              home-manager.nixosModule.home-manager homeManagerModuleCommon
             ];
           };
 
         shrieking-legiana =
           let
             hostnameNew = "shrieking-legiana";
-            username = "whiisper";
+            # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
             specialArgs = {
-              inherit inputs;
-              inherit username;
+              inherit inputs username;
             };
 
             modules = [
@@ -50,6 +62,8 @@
               (./. + "/${hostnameNew}/hardware-configuration.nix")
               (./. + "/${hostnameNew}/configuration.nix")
               (./. + "/${hostnameNew}/base.nix")
+
+              home-manager.nixosModules.home-manager homeManagerModuleCommon
             ];
           };
 
