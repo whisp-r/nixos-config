@@ -16,9 +16,15 @@
 
   programs.atuin = {
     enable = true;
+    daemon.enable = true;
+    enableZshIntegration = true;
     settings = {
       search_mode = "fuzzy";
     };
+  };
+
+  programs.zsh = {
+      autosuggestion.enable = true; # Enable autosuggestions
   };
 
   programs.home-manager.enable = true;

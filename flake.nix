@@ -21,12 +21,15 @@
       username = "whiisper";
       specialArgs = { inherit inputs username; };
       homeManagerModuleCommon = {
-        home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
-        home-manager.users = {
-          ${username} = ./home.nix;
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          users = {
+            ${username} = ./home.nix;
+          };
+          backupFileExtension = "backup";
+          extraSpecialArgs = specialArgs;
         };
-        home-manager.extraSpecialArgs = specialArgs;
       };
     in
     {
