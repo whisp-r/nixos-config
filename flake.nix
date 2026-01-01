@@ -4,20 +4,29 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    home-manager = { 
+    home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
   outputs =
-    { self, nixpkgs, home-manager, ... }@inputs:
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
     let
       username = "whiisper";
+      specialArgs = { inherit inputs username; };
       homeManagerModuleCommon = {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.${username} = ./home.nix;
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.users = {
+          ${username} = ./home.nix;
+        };
+        home-manager.extraSpecialArgs = specialArgs;
       };
     in
     {
@@ -29,9 +38,7 @@
             # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              inherit inputs username;
-            };
+            inherit specialArgs;
 
             modules = [
               { nixpkgs.hostPlatform = "x86_64-linux"; }
@@ -41,7 +48,8 @@
               (./. + "/${hostnameNew}/configuration.nix")
               (./. + "/${hostnameNew}/base.nix")
 
-              home-manager.nixosModule.home-manager homeManagerModuleCommon
+              home-manager.nixosModules.home-manager
+              homeManagerModuleCommon
             ];
           };
 
@@ -51,9 +59,7 @@
             # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
-            specialArgs = {
-              inherit inputs username;
-            };
+            inherit specialArgs;
 
             modules = [
               { nixpkgs.hostPlatform = "x86_64-linux"; }
@@ -63,7 +69,8 @@
               (./. + "/${hostnameNew}/configuration.nix")
               (./. + "/${hostnameNew}/base.nix")
 
-              home-manager.nixosModules.home-manager homeManagerModuleCommon
+              home-manager.nixosModules.home-manager
+              homeManagerModuleCommon
             ];
           };
 
