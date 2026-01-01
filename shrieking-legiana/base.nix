@@ -3,7 +3,7 @@
     imports =
         [
             ../sound.nix
-            ../printer.nix
+            # ../printer.nix
             ../locale.nix
             ../kde.nix
             ../sddm.nix
@@ -32,12 +32,12 @@
     security.polkit.enable = true;
 
     # Enable touchpad support (enabled default in most desktopManager).
-    services.libinput.enable = true;
+    # services.libinput.enable = true;
 
     # Firmware updating/settings
-    services.fwupd.enable = true;
+    # services.fwupd.enable = true;
 
-    services.xwayland.enable = true;
+   # services.xwayland.enable = true;
 
     fonts = {
         enableDefaultPackages = true;

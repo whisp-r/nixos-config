@@ -5,7 +5,7 @@
         firefox = {
             enable = true;
             preferences = { "widget.use-xdg-desktop-portal.file-picker" = 1; };
-            nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+           # nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
         };
 
         thunderbird.enable = true;
@@ -15,7 +15,7 @@
             enable = true;
 
             enableCompletion = true;
-            autosuggestion.enable = true;
+           # autosuggestion.enable = true;
             syntaxHighlighting.enable = true;
 
             ohMyZsh = {
@@ -27,7 +27,7 @@
                 theme = "alanpeabody";
             };
 
-            history.size = 10000;
+           # history.size = 10000;
         };
 
         direnv = {
@@ -36,23 +36,23 @@
             enableZshIntegration = true;
         };
 
-        atuin.enable = true;
+        # atuin.enable = true;
 
         git = {
             enable = true;
 
-            extraConfig = {
-                init.defaultBranch = "main";
-            };
-            userName = "whisp-r";
-            userEmail = "188515789+whisp-r@users.noreply.github.com";
+           #extraConfig = {
+           #    init.defaultBranch = "main";
+           #};
+           # userName = "whisp-r";
+           # userEmail = "188515789+whisp-r@users.noreply.github.com";
         };
 
         lazygit.enable = true;
 
         yazi = {
             enable = true;
-            enableZshIntegration = true;
+           # enableZshIntegration = true;
             #plugins = {
             #    lazygit = pkgs.yaziPlugins.lazygit;
             #};
@@ -105,7 +105,7 @@
         # lazygit # git ui toggle terminal (<Leader>tl or <Leader>gg) check ./git.nix
         gdu # disk usage toggle terminal (<Leader>tu)
         bottom # process viewer toggle terminal (<Leader>tt)
-        python314 # python repl toggle terminal (<Leader>tp)
+        #python314 # python repl toggle terminal (<Leader>tp)
         nodejs_24 # is needed for a lot of the LSPs, and for the node repl toggle terminal (<Leader>tn)
 
         konsave
