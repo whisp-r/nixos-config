@@ -12,8 +12,6 @@
     EDITOR = "nvim";
   };
   environment.sessionVariables = {
-    CODE_EXTENSIONS_DIR = "$HOME/.vscode/extensions";
-    VSCODE_EXTENSIONS = "$HOME/.vscode/extensions";
     NIXOS_OZONE_WL = "1"; # enable wayland support in chromium and electron-based apps
     MOZ_ENABLE_WAYLAND = "1"; # enable wayland support in Firefox
   };
