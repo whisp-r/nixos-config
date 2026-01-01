@@ -1,4 +1,8 @@
-{ config, pkgs, username, ... }:
+{
+  pkgs,
+  username,
+  ...
+}:
 
 {
   home = {
@@ -26,22 +30,22 @@
     };
 
     zsh = {
+      enable = true;
+
+      enableCompletion = true;
+      autosuggestion.enable = true;
+      syntaxHighlighting.enable = true;
+
+      oh-my-zsh = {
         enable = true;
+        plugins = [
+          "git"
+          "direnv"
+        ];
+        theme = "alanpeabody";
+      };
 
-        enableCompletion = true;
-        autosuggestion.enable = true;
-        syntaxHighlighting.enable = true;
-
-        oh-my-zsh = {
-          enable = true;
-          plugins = [
-            "git"
-            "direnv"
-          ];
-          theme = "alanpeabody";
-        };
-
-        history.size = 10000;
+      history.size = 10000;
     };
 
     lazygit.enable = true;
@@ -101,7 +105,6 @@
       enable = true;
       package = pkgs.vscode-fhs;
     };
-
 
   };
 }
