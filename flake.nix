@@ -25,7 +25,7 @@
           useGlobalPkgs = true;
           useUserPackages = true;
           users = {
-            ${username} = ./home.nix;
+            ${username} = import ./home.nix;
           };
           backupFileExtension = "backup";
           extraSpecialArgs = specialArgs;

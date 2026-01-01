@@ -27,8 +27,5 @@
   programs.zsh = {
       autosuggestion.enable = true; # Enable autosuggestions
   };
-
-  programs.emacs.enable = true;
-
   programs.home-manager.enable = true;
 }
