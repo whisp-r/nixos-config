@@ -89,11 +89,12 @@
     git = {
       enable = true;
 
-      extraConfig = {
-          init.defaultBranch = "main";
+      settings = {
+        user.name = "whisp-r";
+        user.email = "188515789+whisp-r@users.noreply.github.com";
+
+        init.defaultBranch = "main";
       };
-       userName = "whisp-r";
-       userEmail = "188515789+whisp-r@users.noreply.github.com";
     };
 
     vscode = {
