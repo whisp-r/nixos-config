@@ -10,7 +10,7 @@
     };
     thunderbird.enable = true;
     localsend.enable = true;
-};
+  };
 
   environment.systemPackages = with pkgs; [
     wayland-utils
