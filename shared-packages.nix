@@ -1,70 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  programs = {
-    firefox = {
-      enable = true;
-      preferences = {
-        "widget.use-xdg-desktop-portal.file-picker" = 1;
-      };
-      # nativeMessagingHosts.packages = [ pkgs.kdePackages.plasma-browser-integration ];
+  programs.firefox = {
+    enable = true;
+    preferences = {
+      "widget.use-xdg-desktop-portal.file-picker" = 1;
     };
-
-    thunderbird.enable = true;
-    localsend.enable = true;
-
-    zsh = {
-      enable = true;
-
-      enableCompletion = true;
-      # autosuggestion.enable = true;
-      syntaxHighlighting.enable = true;
-
-      ohMyZsh = {
-        enable = true;
-        plugins = [
-          "git"
-          "direnv"
-        ];
-        theme = "alanpeabody";
-      };
-
-      # history.size = 10000;
-    };
-
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-      enableZshIntegration = true;
-    };
-
-    # atuin.enable = true;
-
-    git = {
-      enable = true;
-
-      #extraConfig = {
-      #    init.defaultBranch = "main";
-      #};
-      # userName = "whisp-r";
-      # userEmail = "188515789+whisp-r@users.noreply.github.com";
-    };
-
-    lazygit.enable = true;
-
-    yazi = {
-      enable = true;
-      # enableZshIntegration = true;
-      #plugins = {
-      #    lazygit = pkgs.yaziPlugins.lazygit;
-      #};
-    };
-
-    vscode = {
-      enable = true;
-      package = pkgs.vscode-fhs;
-    };
-
   };
 
   environment.systemPackages = with pkgs; [
@@ -79,10 +20,10 @@
     tree
 
     htop
-    btop
-    eza
-    tealdeer
-    fzf
+    # btop
+    # eza
+    # tealdeer
+    # fzf
 
     # archives
     unzip
@@ -130,9 +71,9 @@
 
     onlyoffice-desktopeditors
 
-    keepassxc
+    # keepassxc
 
-    mpv
+    # mpv
 
   ];
 }

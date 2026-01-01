@@ -2,7 +2,6 @@
 
 {
   home = {
-    inherit username;
     homeDirectory = "/home/${username}";
 
     # This value determines the Home Manager release that your configuration is
@@ -15,17 +14,94 @@
     stateVersion = "25.11"; # Please read the comment before changing.
   };
 
-  programs.atuin = {
-    enable = true;
-    daemon.enable = true;
-    settings = {
-      search_mode = "fuzzy";
-    };
-  };
+  programs = {
+    home-manager.enable = true;
 
-  programs.zsh = {
+    atuin = {
       enable = true;
-      autosuggestion.enable = true; # Enable autosuggestions
+      daemon.enable = true;
+      settings = {
+        search_mode = "fuzzy";
+      };
+    };
+
+    zsh = {
+        enable = true;
+
+        enableCompletion = true;
+        autosuggestion.enable = true;
+        syntaxHighlighting.enable = true;
+
+        ohMyZsh = {
+          enable = true;
+          plugins = [
+            "git"
+            "direnv"
+          ];
+          theme = "alanpeabody";
+        };
+
+        history.size = 10000;
+    };
+
+    lazygit.enable = true;
+
+    yazi = {
+      enable = true;
+      enableZshIntegration = true;
+      plugins = {
+        lazygit = pkgs.yaziPlugins.lazygit;
+      };
+      keymap = {
+        mgr.prepend_keymap = [
+          {
+            on = [
+              "g"
+              "i"
+            ];
+            run = "plugin lazygit";
+            desc = "run lazygit";
+          }
+        ];
+      };
+    };
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      enableZshIntegration = true;
+    };
+
+    btop.enable = true; # replacement for htop/nvtop
+    eza.enable = true; # nicer looking `ls` command
+    bat.enable = true; # nicer looking `cat` command
+    ssh.enable = true;
+    fzf.enable = true;
+
+    tealdeer = {
+      enable = true;
+      enableAutoUpdates = true;
+    };
+
+    # GUI
+    keepassxc.enable = true;
+    mpv.enable = true;
+
+    git = {
+      enable = true;
+
+      extraConfig = {
+          init.defaultBranch = "main";
+      };
+       userName = "whisp-r";
+       userEmail = "188515789+whisp-r@users.noreply.github.com";
+    };
+
+    vscode = {
+      enable = true;
+      package = pkgs.vscode-fhs;
+    };
+
+    thunderbird.enable = true;
+    localsend.enable = true;
   };
-  programs.home-manager.enable = true;
 }
