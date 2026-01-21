@@ -105,6 +105,10 @@
       enable = true;
       package = pkgs.vscode-fhs;
     };
+    zed-editor = {
+      enable = true;
+      package = pkgs.zed-editor-fhs;
+    };
 
   };
 }

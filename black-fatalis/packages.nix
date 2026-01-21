@@ -19,6 +19,6 @@
     # discord
     vesktop
 
-    zed-editor-fhs
+    # zed-editor-fhs
   ];
 }
