@@ -29,7 +29,7 @@
       ## https://github.com/NixOS/nixpkgs/issues/354513
       # (pkgs.runCommand "steamrun-lib" {} "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")
     ];
-  }
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -50,8 +50,6 @@
 
   # Firmware updating/settings
   services.fwupd.enable = true;
-
-  services.xwayland.enable = true;
 
   fonts = {
     enableDefaultPackages = true;
