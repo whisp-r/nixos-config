@@ -1,0 +1,11 @@
+[workspace]
+members = [
+    "edu-sync",
+    "edu-sync-cli",
+    "edu-ws",
+    "edu-ws-derive",
+]
+resolver = "2"
+
+[profile.release]
+lto = "thin"
