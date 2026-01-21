@@ -8,6 +8,13 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # for custom pkgs (edu-sync, ...)
+    flake-utils.url = "github:numtide/flake-utils";
+    naersk = {
+      url = "github:nix-community/naersk";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -50,6 +57,8 @@
               (./. + "/${hostnameNew}/hardware-configuration.nix")
               (./. + "/${hostnameNew}/configuration.nix")
               (./. + "/${hostnameNew}/base.nix")
+
+              (./. + "/${hostnameNew}/custom-packages.nix")
 
               home-manager.nixosModules.home-manager
               homeManagerModuleCommon
