@@ -25,6 +25,8 @@
       enable = true;
       daemon.enable = true;
       settings = {
+        auto_sync = "true";
+        sync_frequency = "5m";
         search_mode = "fuzzy";
       };
     };
@@ -44,8 +46,6 @@
         ];
         theme = "alanpeabody";
       };
-
-      history.size = 10000;
     };
 
     lazygit.enable = true;
@@ -78,7 +78,7 @@
     btop.enable = true; # replacement for htop/nvtop
     eza.enable = true; # nicer looking `ls` command
     bat.enable = true; # nicer looking `cat` command
-    ssh.enable = true;
+    # ssh.enable = true; # deprecate eval warning about `ssh.enableDefaultConfig = false;` to be set
     fzf.enable = true;
 
     tealdeer = {

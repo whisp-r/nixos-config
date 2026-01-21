@@ -16,6 +16,7 @@
   environment.systemPackages = with pkgs; [
     wayland-utils
     wl-clipboard
+    vscode-runner
 
     # CLI
     vim
