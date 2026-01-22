@@ -44,19 +44,20 @@
 
         black-fatalis =
           let
-            hostnameNew = "black-fatalis";
+            hostname = "black-fatalis";
+            system = "x86_64-linux";
             # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
             inherit specialArgs;
 
             modules = [
-              { nixpkgs.hostPlatform = "x86_64-linux"; }
-              { networking.hostName = "${hostnameNew}"; }
+              { nixpkgs.hostPlatform = system; }
+              { networking.hostName = hostname; }
 
-              ./${hostnameNew}/hardware-configuration.nix
-              ./${hostnameNew}/configuration.nix
-              ./${hostnameNew}/base.nix
+              ./${hostname}/hardware-configuration.nix
+              ./${hostname}/configuration.nix
+              ./${hostname}/base.nix
 
               home-manager.nixosModules.home-manager
               homeManagerModuleCommon
@@ -65,19 +66,20 @@
 
         shrieking-legiana =
           let
-            hostnameNew = "shrieking-legiana";
+            hostname = "shrieking-legiana";
+            system = "x86_64-linux";
             # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
             inherit specialArgs;
 
             modules = [
-              { nixpkgs.hostPlatform = "x86_64-linux"; }
-              { networking.hostName = "${hostnameNew}"; }
+              { nixpkgs.hostPlatform = system; }
+              { networking.hostName = hostname; }
 
-              ./${hostnameNew}/hardware-configuration.nix
-              ./${hostnameNew}/configuration.nix
-              ./${hostnameNew}/base.nix
+              ./${hostname}/hardware-configuration.nix
+              ./${hostname}/configuration.nix
+              ./${hostname}/base.nix
 
               home-manager.nixosModules.home-manager
               homeManagerModuleCommon
