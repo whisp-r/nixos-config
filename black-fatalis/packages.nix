@@ -16,6 +16,8 @@ in
       krita
       losslesscut-bin
       vesktop
+
+      jetbrains.clion
     ]
     ++ [ # custom packages
       edu-sync-cli
