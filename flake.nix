@@ -8,6 +8,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    edu-sync-nix = {
+      url = "github:Marc55s/edu-sync-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -47,9 +51,9 @@
               { nixpkgs.hostPlatform = "x86_64-linux"; }
               { networking.hostName = "${hostnameNew}"; }
 
-              (./. + "/${hostnameNew}/hardware-configuration.nix")
-              (./. + "/${hostnameNew}/configuration.nix")
-              (./. + "/${hostnameNew}/base.nix")
+              ./${hostnameNew}/hardware-configuration.nix
+              ./${hostnameNew}/configuration.nix
+              ./${hostnameNew}/base.nix
 
               home-manager.nixosModules.home-manager
               homeManagerModuleCommon
@@ -68,9 +72,9 @@
               { nixpkgs.hostPlatform = "x86_64-linux"; }
               { networking.hostName = "${hostnameNew}"; }
 
-              (./. + "/${hostnameNew}/hardware-configuration.nix")
-              (./. + "/${hostnameNew}/configuration.nix")
-              (./. + "/${hostnameNew}/base.nix")
+              ./${hostnameNew}/hardware-configuration.nix
+              ./${hostnameNew}/configuration.nix
+              ./${hostnameNew}/base.nix
 
               home-manager.nixosModules.home-manager
               homeManagerModuleCommon
