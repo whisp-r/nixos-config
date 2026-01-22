@@ -1,24 +1,35 @@
-{ pkgs, ... }:
-
 {
-  environment.systemPackages = with pkgs; [
-    imhex
-    #upscayl
+  pkgs,
+  system,
+  inputs,
+  ...
+}:
 
-    # games
-    #ludusavi
+let
+  edu-sync-cli = inputs.edu-sync-nix.packages.${system}.default;
+in
+{
+  environment.systemPackages =
+    with pkgs;
+    [
+      imhex
+      #upscayl
 
-    # anime
-    #ani-cli
-    #anime4k
+      # games
+      #ludusavi
 
-    krita
+      # anime
+      #ani-cli
+      #anime4k
 
-    losslesscut-bin
+      krita
 
-    # discord
-    vesktop
+      losslesscut-bin
 
-    # zed-editor-fhs
-  ];
+      # discord
+      vesktop
+
+      # zed-editor-fhs
+    ]
+    ++ [ edu-sync-cli ];
 }

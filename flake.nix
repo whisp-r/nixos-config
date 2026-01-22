@@ -1,5 +1,4 @@
 {
-
   description = "New simpler whisp-r config, beucase i learned better";
 
   inputs = {
@@ -23,7 +22,10 @@
     }@inputs:
     let
       username = "whiisper";
-      specialArgs = { inherit inputs username; };
+      system = "x86_64-linux";
+
+      specialArgs = { inherit inputs username system; };
+
       homeManagerModuleCommon = {
         home-manager = {
           useGlobalPkgs = true;
@@ -35,6 +37,7 @@
           extraSpecialArgs = specialArgs;
         };
       };
+
     in
     {
       nixosConfigurations = {
