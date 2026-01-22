@@ -1,7 +1,6 @@
 {
   pkgs,
   username,
-  system,
   inputs,
   ...
 }:
@@ -21,7 +20,7 @@
   };
   home.packages =
     let
-      edu-sync-cli = inputs.edu-sync-nix.packages.${system}.default;
+      edu-sync-cli = inputs.edu-sync-nix.packages.${pkgs.hostPlatform}.default;
     in
     [
       edu-sync-cli
