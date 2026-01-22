@@ -22,9 +22,8 @@
     }@inputs:
     let
       username = "whiisper";
-      system = "x86_64-linux";
 
-      specialArgs = { inherit inputs username system; };
+      specialArgs = { inherit inputs username; };
 
       homeManagerModuleCommon = {
         home-manager = {
@@ -46,10 +45,9 @@
           let
             hostname = "black-fatalis";
             system = "x86_64-linux";
-            # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
-            inherit specialArgs;
+            inherit specialArgs system;
 
             modules = [
               { nixpkgs.hostPlatform = system; }
@@ -68,10 +66,9 @@
           let
             hostname = "shrieking-legiana";
             system = "x86_64-linux";
-            # username = "whiisper";
           in
           nixpkgs.lib.nixosSystem {
-            inherit specialArgs;
+            inherit specialArgs system;
 
             modules = [
               { nixpkgs.hostPlatform = system; }

@@ -1,8 +1,6 @@
 {
   pkgs,
   username,
-  system,
-  inputs,
   ...
 }:
 
@@ -19,13 +17,6 @@
     # release notes.
     stateVersion = "25.11"; # Please read the comment before changing.
   };
-  # home.packages =
-  #   let
-  #     edu-sync-cli = inputs.edu-sync-nix.packages.${system}.default;
-  #   in
-  #   [
-  #     edu-sync-cli
-  #   ];
 
   programs = {
     home-manager.enable = true;

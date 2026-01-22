@@ -13,23 +13,11 @@ in
     with pkgs;
     [
       imhex
-      #upscayl
-
-      # games
-      #ludusavi
-
-      # anime
-      #ani-cli
-      #anime4k
-
       krita
-
       losslesscut-bin
-
-      # discord
       vesktop
-
-      # zed-editor-fhs
     ]
-    ++ [ edu-sync-cli ];
+    ++ [ # custom packages
+      edu-sync-cli
+    ];
 }
