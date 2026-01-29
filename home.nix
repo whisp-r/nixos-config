@@ -109,6 +109,9 @@
       enable = true;
       package = pkgs.zed-editor-fhs;
     };
+    helix = {
+      enable = true;
+    };
 
   };
 }
