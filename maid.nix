@@ -5,9 +5,18 @@
   ...
 }:
 
-let
-  repo_location = "{{home}}/nixos-config/";
-in
+# let
+#   repo_location = "{{home}}/nixos-config/";
+# in
 {
-  file.xdg_config."zed/".source = repo_location + "/dotfiles/zed/";
+  # maid = {
+  file.xdg_config."zed/".source = "{{home}}/nixos-config/dotfiles/zed/";
+  
+  file.home.".local/bin/hello.sh" = {
+    text = ''
+      echo Hello $USER
+    '';
+    executable = true;
+  };
+  # };
 }
