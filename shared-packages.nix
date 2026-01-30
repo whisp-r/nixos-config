@@ -1,6 +1,13 @@
 { pkgs, ... }:
 
 {
+  services = {
+    atuin = {
+      enable = true;
+      openFirewall = true;
+    };
+  };
+
   programs = {
     firefox = {
       enable = true;
@@ -10,7 +17,59 @@
     };
     thunderbird.enable = true;
     localsend.enable = true;
-    zsh.enable = true;
+    lazygit.enable = true;
+
+    zsh = {
+      enable = true;
+
+      enableCompletion = true;
+      autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
+
+      ohMyZsh = {
+        enable = true;
+        plugins = [
+          "git"
+          "direnv"
+        ];
+        theme = "alanpeabody";
+      };
+    };
+
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+      enableZshIntegration = true;
+    };
+
+    git = {
+      enable = true;
+      config = {
+        init.defaultBranch = "main";
+        user.name = "whisp-r";
+        user.email = "188515789+whisp-r@users.noreply.github.com";
+      };
+    };
+
+    yazi = {
+      enable = true;
+      # enableZshIntegration = true;
+      plugins = {
+        lazygit = pkgs.yaziPlugins.lazygit;
+      };
+      settings.keymap = {
+        mgr.prepend_keymap = [
+          {
+            on = [
+              "g"
+              "i"
+            ];
+            run = "plugin lazygit";
+            desc = "run lazygit";
+          }
+        ];
+      };
+    };
   };
 
   environment.systemPackages = with pkgs; [
@@ -26,10 +85,11 @@
     tree
 
     htop
-    # btop
-    # eza
-    # tealdeer
-    # fzf
+    btop
+    eza
+    bat
+    tealdeer
+    fzf
 
     # archives
     unzip
@@ -45,6 +105,9 @@
     sops
 
     # text editor
+    zed-editor-fhs
+    vscode-fhs
+    helix
     neovim # not configured via NixOS or home-manager (https://github.com/whisp-r/nvim-config)
 
     # Astronvim requirements:
@@ -56,6 +119,7 @@
     nodejs_24 # is needed for a lot of the LSPs, and for the node repl toggle terminal (<Leader>tn)
 
     konsave
+    atuin
 
     # GUI
 
@@ -77,9 +141,9 @@
 
     onlyoffice-desktopeditors
 
-    # keepassxc
+    keepassxc
 
-    # mpv
+    mpv
 
   ];
 }

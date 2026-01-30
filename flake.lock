@@ -39,23 +39,18 @@
         "type": "github"
       }
     },
-    "home-manager": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
+    "nix-maid": {
       "locked": {
-        "lastModified": 1769015285,
-        "narHash": "sha256-MlqzCJbckJsgwfkRs64H2xaX2Uxl4o6Z9XYfkYS1N/E=",
-        "owner": "nix-community",
-        "repo": "home-manager",
-        "rev": "ec0247a7a19f641595c24ac1ea4df6461d1cdb36",
+        "lastModified": 1769288453,
+        "narHash": "sha256-nvybtwQnyGeUbAq/iOMnt0rOGrp8nkyjnZTW9XIsrfI=",
+        "owner": "viperML",
+        "repo": "nix-maid",
+        "rev": "303e67a8c67d1ba1416abd8842d206a57b46f832",
         "type": "github"
       },
       "original": {
-        "owner": "nix-community",
-        "repo": "home-manager",
+        "owner": "viperML",
+        "repo": "nix-maid",
         "type": "github"
       }
     },
@@ -78,7 +73,7 @@
     "root": {
       "inputs": {
         "edu-sync-nix": "edu-sync-nix",
-        "home-manager": "home-manager",
+        "nix-maid": "nix-maid",
         "nixpkgs": "nixpkgs"
       }
     },

@@ -9,7 +9,7 @@
     XDG_DATA_HOME = "$HOME/.local/share";
     XDG_STATE_HOME = "$HOME/.local/state";
 
-    EDITOR = "nvim";
+    EDITOR = "hx";
   };
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # enable wayland support in chromium and electron-based apps

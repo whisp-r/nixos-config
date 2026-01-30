@@ -5,6 +5,7 @@
 }:
 {
   imports = [
+    ../user.nix
     ../sound.nix
     ../printer.nix
     ../locale.nix
@@ -64,12 +65,4 @@
     ];
   };
 
-  users.users.${username} = {
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-      "networkmanager"
-    ]; # Enable ‘sudo’ for the user.
-    shell = pkgs.zsh;
-  };
 }
