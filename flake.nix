@@ -62,6 +62,7 @@
               ./${hostname}/configuration.nix
               ./${hostname}/base.nix
 
+              nix-maid.nixosModules.default
             ];
           };
 
