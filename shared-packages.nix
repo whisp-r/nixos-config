@@ -23,7 +23,7 @@
       enable = true;
 
       enableCompletion = true;
-      autosuggestion.enable = true;
+      autosuggestions.enable = true;
       syntaxHighlighting.enable = true;
 
       ohMyZsh = {
@@ -53,11 +53,11 @@
 
     yazi = {
       enable = true;
-      enableZshIntegration = true;
+      # enableZshIntegration = true;
       plugins = {
         lazygit = pkgs.yaziPlugins.lazygit;
       };
-      keymap = {
+      settings.keymap = {
         mgr.prepend_keymap = [
           {
             on = [
@@ -119,6 +119,7 @@
     nodejs_24 # is needed for a lot of the LSPs, and for the node repl toggle terminal (<Leader>tn)
 
     konsave
+    atuin
 
     # GUI
 

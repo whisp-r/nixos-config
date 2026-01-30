@@ -16,6 +16,7 @@
     {
       self,
       nixpkgs,
+      nix-maid,
       ...
     }@inputs:
     let
@@ -42,6 +43,7 @@
               ./${hostname}/configuration.nix
               ./${hostname}/base.nix
 
+              nix-maid.nixosModules.default
             ];
           };
 

@@ -1,0 +1,40 @@
+{
+  "diagnostics": {
+    "inline": {
+      "enabled": false
+    }
+  },
+  "disable_ai": true,
+  "auto_update": false,
+
+  // editing
+  "vim_mode": true,
+  "vim": {
+    "toggle_relative_line_numbers": true,
+    "highlight_on_yank_duration": 250,
+  },
+
+  "format_on_save": "off",
+
+  // ui
+  "ui_font_size": 16,
+
+  "project_panel": {
+    "dock": "right",
+  },
+
+  // theming
+  "theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
+  },
+  "icon_theme": {
+    "mode": "system",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
+  },
+
+  // direnv
+  "load_direnv": "shell_hook",
+}
