@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   services = {
@@ -51,25 +51,20 @@
       };
     };
 
-    yazi = {
-      enable = true;
-      # enableZshIntegration = true;
-      plugins = {
-        lazygit = pkgs.yaziPlugins.lazygit;
-      };
-      settings.keymap = {
-        mgr.prepend_keymap = [
-          {
-            on = [
-              "g"
-              "i"
-            ];
-            run = "plugin lazygit";
-            desc = "run lazygit";
-          }
-        ];
-      };
-    };
+    # NOTE: This is managed with nix-maid, documentation for this shit is abysmal
+    # yazi = {
+    #   enable = true;
+    #  enableZshIntegration = true;
+    #
+    #  plugins = {
+    #    lazygit = pkgs.yaziPlugins.lazygit;
+    #  };
+    #  flavors = ./dotfiles/yazi/flavors;
+    #  settings = {
+    #    keymap = lib.importTOML ./dotfiles/yazi/keymap.toml;
+    #    theme = lib.importTOML ./dotfiles/yazi/theme.toml;
+    #  };
+    # };
   };
 
   environment.systemPackages = with pkgs; [
@@ -83,13 +78,16 @@
     curl
     fastfetch
     tree
-
     htop
     btop
     eza
     bat
     tealdeer
+
+    # search
+    yazi
     fzf
+    ripgrep # live grep file search (<Leader>fw)
 
     # archives
     unzip
@@ -108,15 +106,7 @@
     zed-editor-fhs
     vscode-fhs
     helix
-    neovim # not configured via NixOS or home-manager (https://github.com/whisp-r/nvim-config)
 
-    # Astronvim requirements:
-    ripgrep # live grep file search (<Leader>fw)
-    # lazygit # git ui toggle terminal (<Leader>tl or <Leader>gg) check ./git.nix
-    gdu # disk usage toggle terminal (<Leader>tu)
-    bottom # process viewer toggle terminal (<Leader>tt)
-    #python314 # python repl toggle terminal (<Leader>tp)
-    nodejs_24 # is needed for a lot of the LSPs, and for the node repl toggle terminal (<Leader>tn)
 
     konsave
     atuin

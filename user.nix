@@ -13,7 +13,6 @@
       "networkmanager"
     ]; 
     shell = pkgs.zsh;
-
     maid = ./maid.nix;
   };
 }
