@@ -23,27 +23,9 @@
       enable = true;
     };
 
-    # zsh = {
-    #   enable = true;
-
-    #   enableCompletion = true;
-    #   autosuggestions.enable = true;
-    #   syntaxHighlighting.enable = true;
-
-    #   ohMyZsh = {
-    #     enable = true;
-    #     plugins = [
-    #       "git"
-    #       "direnv"
-    #     ];
-    #     theme = "alanpeabody";
-    #   };
-    # };
-
     direnv = {
       enable = true;
       nix-direnv.enable = true;
-      enableFishIntegration = true;
     };
 
     git = {
