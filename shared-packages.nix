@@ -117,8 +117,6 @@
     sops
 
     # text editor
-    zed-editor-fhs
-    vscode-fhs
     helix
 
     konsave
@@ -148,5 +146,7 @@
 
     mpv
 
+    # zed-editor-fhs
+    # vscode-fhs
   ];
 }
