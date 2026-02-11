@@ -54,6 +54,7 @@
         user.email = "188515789+whisp-r@users.noreply.github.com";
       };
     };
+  };
 
   # https://forum.atuin.sh/t/getting-the-daemon-working-on-nixos/334/3
   systemd.user.services.atuind = {
