@@ -14,5 +14,6 @@
   environment.sessionVariables = {
     NIXOS_OZONE_WL = "1"; # enable wayland support in chromium and electron-based apps
     MOZ_ENABLE_WAYLAND = "1"; # enable wayland support in Firefox
+    GTK_USE_PORTAL = "1"; # make gtk apps use the xdg-desktop-portal(-kde)
   };
 }
