@@ -15,4 +15,5 @@ in
   file.xdg_config."atuin/".source = "${dotfiles_location}/atuin/";
   file.xdg_config."helix/".source = "${dotfiles_location}/helix/";
   file.xdg_config."fish/".source = "${dotfiles_location}/fish/";
+  file.xdg_config."starship.toml".source = "${dotfiles_location}/starship/starship.toml";
 }

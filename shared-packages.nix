@@ -25,7 +25,7 @@
 
     starship = {
       enable = true;
-    }
+    };
 
     direnv = {
       enable = true;
