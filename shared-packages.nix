@@ -19,27 +19,30 @@
     localsend.enable = true;
     lazygit.enable = true;
 
-    zsh = {
+    fish = {
       enable = true;
+    }
+    # zsh = {
+    #   enable = true;
 
-      enableCompletion = true;
-      autosuggestions.enable = true;
-      syntaxHighlighting.enable = true;
+    #   enableCompletion = true;
+    #   autosuggestions.enable = true;
+    #   syntaxHighlighting.enable = true;
 
-      ohMyZsh = {
-        enable = true;
-        plugins = [
-          "git"
-          "direnv"
-        ];
-        theme = "alanpeabody";
-      };
-    };
+    #   ohMyZsh = {
+    #     enable = true;
+    #     plugins = [
+    #       "git"
+    #       "direnv"
+    #     ];
+    #     theme = "alanpeabody";
+    #   };
+    # };
 
     direnv = {
       enable = true;
       nix-direnv.enable = true;
-      enableZshIntegration = true;
+      enableFishIntegration = true;
     };
 
     git = {
@@ -50,22 +53,6 @@
         user.email = "188515789+whisp-r@users.noreply.github.com";
       };
     };
-
-    # NOTE: This is managed with nix-maid, documentation for this shit is abysmal
-    # yazi = {
-    #   enable = true;
-    #  enableZshIntegration = true;
-    #
-    #  plugins = {
-    #    lazygit = pkgs.yaziPlugins.lazygit;
-    #  };
-    #  flavors = ./dotfiles/yazi/flavors;
-    #  settings = {
-    #    keymap = lib.importTOML ./dotfiles/yazi/keymap.toml;
-    #    theme = lib.importTOML ./dotfiles/yazi/theme.toml;
-    #  };
-    # };
-  };
 
   # https://forum.atuin.sh/t/getting-the-daemon-working-on-nixos/334/3
   systemd.user.services.atuind = {

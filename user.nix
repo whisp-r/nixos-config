@@ -12,7 +12,7 @@
       "wheel"
       "networkmanager"
     ]; 
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
     maid = ./maid.nix;
   };
 }
