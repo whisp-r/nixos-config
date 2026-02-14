@@ -7,5 +7,6 @@
     # none
     imhex
     vesktop
+    krita
   ];
 }
