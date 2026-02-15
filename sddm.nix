@@ -6,6 +6,7 @@
     wayland.enable = true;
     enableHidpi = true;
 
-    theme = "breeze";
+    theme = "catppuccin-latte-mauve";
+    # theme = "breeze";
   };
 }
