@@ -1,1 +1,1 @@
-abbr --add ll eza -lhaT --icons --git
+abbr --add ll eza -lhaT --git --time-style=long-iso --level 2
