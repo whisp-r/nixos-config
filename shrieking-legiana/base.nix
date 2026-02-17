@@ -7,7 +7,7 @@
   imports = [
     ../user.nix
     ../sound.nix
-    # ../printer.nix
+    ../printer.nix
     ../locale.nix
     ../kde.nix
     ../sddm.nix
