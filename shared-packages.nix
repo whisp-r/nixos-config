@@ -122,6 +122,6 @@
     mpv
 
     # zed-editor-fhs
-    # vscode-fhs
+    vscode-fhs
   ];
 }
