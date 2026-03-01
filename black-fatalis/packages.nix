@@ -18,6 +18,10 @@ in
       vesktop
 
       jetbrains.clion
+
+      nixfmt
+      nixd
+      nil
     ]
     ++ [
       # custom packages
