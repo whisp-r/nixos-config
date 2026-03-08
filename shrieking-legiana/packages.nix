@@ -7,6 +7,7 @@
     # none
     imhex
     vesktop
+    firefox-devedition
     krita
   ];
 }
