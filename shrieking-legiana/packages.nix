@@ -9,5 +9,6 @@
     vesktop
     firefox-devedition
     krita
+    jetbrains.webstorm
   ];
 }
