@@ -1,4 +1,5 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR __fish_initialized:4300
+SETUVAR --export dirprev:/home/whiisper\x1e/home/whiisper\x1e/home/whiisper/nixos\x2dconfig\x1e/home/whiisper\x1e/home/whiisper\x1e/home/whiisper/Downloads\x1e/home/whiisper/nixos\x2dconfig\x1e/home/whiisper\x1e/home/whiisper/Documents/jn134447/pwks\x2dlabovi\x1e/home/whiisper/Downloads\x1e/home/whiisper/Documents/jn134447/pwks\x2dlabovi\x1e/home/whiisper/Downloads\x1e/home/whiisper/Documents/jn134447/pwks\x2dlabovi\x1e/home/whiisper/Documents/jn134447/pwks\x2dlabovi/vjezba_00\x1e/home/whiisper/Documents/jn134447/pwks\x2dlabovi/vjezba_00/vjezba0\x1e/home/whiisper\x1e/home/whiisper/Documents/jn134447/pwks\x2dlabovi/vjezba_00
 SETUVAR fish_greeting:\x1d
