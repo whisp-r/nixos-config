@@ -8,6 +8,7 @@
   "auto_update": false,
 
   // editing
+  "helix_mode": true,
   "vim_mode": true,
   "vim": {
     "toggle_relative_line_numbers": true,

@@ -22,6 +22,8 @@ in
       nixfmt
       nixd
       nil
+
+      zed-editor-fhs
     ]
     ++ [
       # custom packages
