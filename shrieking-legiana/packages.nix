@@ -10,5 +10,10 @@
     firefox-devedition
     krita
     jetbrains.webstorm
+    docker
+
+    ghidra
+    wireshark
+    obsidian
   ];
 }
