@@ -5,15 +5,15 @@
 
   environment.systemPackages = with pkgs; [
     # none
-    imhex
+    # imhex
     vesktop
-    firefox-devedition
-    krita
-    jetbrains.webstorm
-    docker
+    # firefox-devedition
+    # krita
+    # jetbrains.webstorm
+    # docker
 
-    ghidra
-    wireshark
-    obsidian
+    # ghidra
+    # wireshark
+    # obsidian
   ];
 }
