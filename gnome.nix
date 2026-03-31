@@ -13,4 +13,7 @@
     # gnome-user-docs
   ];
 
+  environment.systemPackages = with pkgs; [
+    gnomeExtensions.clipboard-history
+  ];
 }

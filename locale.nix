@@ -9,7 +9,7 @@
 
   i18n.extraLocaleSettings = {
     LC_NUMERIC = "hr_HR.UTF-8";
-    LC_TIME = "en_CA.UTF-8";
+    LC_TIME = "hr_HR.UTF-8";
     LC_MONETARY = "hr_HR.UTF-8";
     LC_MEASUREMENT = "hr_HR.UTF-8";
     LC_PAPER = "hr_HR.UTF-8";

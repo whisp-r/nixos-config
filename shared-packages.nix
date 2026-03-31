@@ -68,6 +68,9 @@
     tealdeer
     fastfetch
 
+    # gnome console
+    ueberzugpp
+
     # search
     yazi
     fzf
