@@ -24,11 +24,36 @@ in
       nil
 
       zed-editor-fhs
+
+      kdePackages.partitionmanager
+      kdePackages.ksystemlog
+
+      kdePackages.ark
+      kdePackages.filelight
+
+      kdePackages.kcolorchooser
+      kdePackages.kcalc
+      kdePackages.kolourpaint
+
+      kdePackages.sddm-kcm
+      kdePackages.isoimagewriter
+
+      kdePackages.okular
+      kdePackages.gwenview
+
+      onlyoffice-desktopeditors
+
     ]
     ++ [
       # custom packages
       edu-sync-cli
     ];
+
+  programs = {
+    thunderbird.enable = true;
+    localsend.enable = true;
+
+  };
 
   # programs.steam = {
   #   enable = true;

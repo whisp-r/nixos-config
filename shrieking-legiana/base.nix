@@ -9,9 +9,10 @@
     ../sound.nix
     # ../printer.nix
     ../locale.nix
-    ../kde.nix
-    ../plasma-login.nix
+    # ../kde.nix
+    # ../plasma-login.nix
     # ../sddm.nix
+    ../gnome.nix
     ../environment.nix
     ../experimental.nix
 

@@ -15,17 +15,10 @@
         "widget.use-xdg-desktop-portal.file-picker" = 1;
       };
     };
-    thunderbird.enable = true;
-    localsend.enable = true;
-    lazygit.enable = true;
 
     fish = {
       enable = true;
     };
-
-    # starship = {
-    #   enable = true;
-    # };
 
     direnv = {
       enable = true;
@@ -40,6 +33,8 @@
         user.email = "188515789+whisp-r@users.noreply.github.com";
       };
     };
+    lazygit.enable = true;
+
   };
 
   # https://forum.atuin.sh/t/getting-the-daemon-working-on-nixos/334/3
@@ -61,22 +56,22 @@
     wl-clipboard
     vscode-runner
 
-    # CLI
+    # basic
     vim
     wget
     curl
-    fastfetch
     tree
     htop
     btop
     eza
     bat
     tealdeer
+    fastfetch
 
     # search
     yazi
     fzf
-    ripgrep # live grep file search (<Leader>fw)
+    ripgrep
 
     # archives
     unzip
@@ -84,38 +79,37 @@
     rar
     rar2fs
 
+    # img/video
     ffmpeg_6
     imagemagick
 
     # encryption/secrets
     age
-    sops
 
     # text editor
     helix
 
-    konsave
     atuin
 
     # GUI
 
-    kdePackages.partitionmanager
-    kdePackages.ksystemlog
+    # kdePackages.partitionmanager
+    # kdePackages.ksystemlog
 
-    kdePackages.ark
-    kdePackages.filelight
+    # kdePackages.ark
+    # kdePackages.filelight
 
-    kdePackages.kcolorchooser
-    kdePackages.kcalc
-    kdePackages.kolourpaint
+    # kdePackages.kcolorchooser
+    # kdePackages.kcalc
+    # kdePackages.kolourpaint
 
-    kdePackages.sddm-kcm
-    kdePackages.isoimagewriter
+    # kdePackages.sddm-kcm
+    # kdePackages.isoimagewriter
 
-    kdePackages.okular
-    kdePackages.gwenview
+    # kdePackages.okular
+    # kdePackages.gwenview
 
-    onlyoffice-desktopeditors
+    # onlyoffice-desktopeditors
 
     keepassxc
 
