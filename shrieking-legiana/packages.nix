@@ -16,4 +16,8 @@
     # wireshark
     # obsidian
   ];
+
+  programs = {
+    thunderbird.enable = true;
+  };
 }
