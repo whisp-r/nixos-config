@@ -68,8 +68,10 @@
     tealdeer
     fastfetch
 
-    # gnome console
-    ueberzugpp
+    # libGL
+    blackbox-terminal
+    # ghostty
+    # ueberzugpp
 
     # search
     yazi
