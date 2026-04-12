@@ -9,11 +9,12 @@
   services.gnome.games.enable = false;
 
   environment.gnome.excludePackages = with pkgs; [
-    gnome-tour
+    # gnome-tour
     # gnome-user-docs
   ];
 
   environment.systemPackages = with pkgs; [
     gnomeExtensions.clipboard-history
+    gnomeExtensions.appindicator
   ];
 }
