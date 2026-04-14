@@ -8,19 +8,19 @@
     };
   };
 
-  # https://forum.atuin.sh/t/getting-the-daemon-working-on-nixos/334/3
-  systemd.user.services.atuind = {
-    enable = true;
+  # # https://forum.atuin.sh/t/getting-the-daemon-working-on-nixos/334/3
+  # systemd.user.services.atuind = {
+  #   enable = true;
 
-    environment = {
-      ATUIN_LOG = "info";
-    };
-    serviceConfig = {
-      ExecStart = "${pkgs.atuin}/bin/atuin daemon";
-    };
-    after = [ "network.target" ];
-    wantedBy = [ "default.target" ];
-  };
+  #   environment = {
+  #     ATUIN_LOG = "info";
+  #   };
+  #   serviceConfig = {
+  #     ExecStart = "${pkgs.atuin}/bin/atuin daemon";
+  #   };
+  #   after = [ "network.target" ];
+  #   wantedBy = [ "default.target" ];
+  # };
 
   programs = {
     firefox = {
@@ -77,6 +77,8 @@
 
     tealdeer
     fastfetch
+
+    atuin
 
     # tui
     htop
