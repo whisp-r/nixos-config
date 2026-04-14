@@ -20,13 +20,9 @@
     ./packages.nix
   ];
 
-  virtualisation.docker = {
-    enable = true;
-  };
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  ## beucase of xampp
   # Allow NixOS to run unpatched executables
   programs.nix-ld = {
     enable = true;
