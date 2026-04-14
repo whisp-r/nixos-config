@@ -1,11 +1,17 @@
 [com/raggesilver/BlackBox]
 font='JetBrainsMono Nerd Font 12'
-was-maximized=false
+remember-window-size=true
+style-preference=uint32 0
+theme-dark='Adwaita Dark'
+was-maximized=true
+window-height=uint32 687
+window-width=uint32 1449
 
 [org/freedesktop/folks]
 primary-store='eds:system-address-book'
 
 [org/gnome/Console]
+font-scale=1.0
 last-window-maximised=false
 last-window-size=(1176, 731)
 
@@ -16,13 +22,19 @@ window-height=600
 window-maximized=false
 window-width=800
 
+[org/gnome/Music]
+window-maximized=false
+
+[org/gnome/TextEditor]
+style-scheme='classic-dark'
+
 [org/gnome/calendar]
 active-view='month'
-window-maximized=true
-window-size=(768, 600)
+window-maximized=false
+window-size=(1210, 812)
 
 [org/gnome/control-center]
-last-panel='online-accounts'
+last-panel='background'
 window-state=(980, 640, false)
 
 [org/gnome/desktop/app-folders]
@@ -49,8 +61,12 @@ name='suse-yast.directory'
 translate=true
 
 [org/gnome/desktop/background]
-primary-color='#3a4ba0'
-secondary-color='#2f302f'
+color-shading-type='solid'
+picture-options='zoom'
+picture-uri='file:///home/whiisper/.local/share/backgrounds/2026-04-11-16-41-55-asya'
+picture-uri-dark='file:///home/whiisper/.local/share/backgrounds/2026-04-11-16-41-55-asya'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/break-reminders/eyesight]
 play-sound=true
@@ -69,10 +85,22 @@ accent-color='purple'
 color-scheme='prefer-dark'
 
 [org/gnome/desktop/notifications]
-application-children=['firefox']
+application-children=['firefox', 'org-gnome-nautilus', 'gnome-about-panel', 'code', 'com-raggesilver-blackbox']
+
+[org/gnome/desktop/notifications/application/code]
+application-id='code.desktop'
+
+[org/gnome/desktop/notifications/application/com-raggesilver-blackbox]
+application-id='com.raggesilver.BlackBox.desktop'
 
 [org/gnome/desktop/notifications/application/firefox]
 application-id='firefox.desktop'
+
+[org/gnome/desktop/notifications/application/gnome-about-panel]
+application-id='gnome-about-panel.desktop'
+
+[org/gnome/desktop/notifications/application/org-gnome-nautilus]
+application-id='org.gnome.Nautilus.desktop'
 
 [org/gnome/desktop/peripherals/keyboard]
 numlock-state=true
@@ -83,9 +111,9 @@ two-finger-scrolling-enabled=true
 [org/gnome/desktop/screensaver]
 color-shading-type='solid'
 picture-options='zoom'
-picture-uri='file:///nix/store/5d0rh879a4374wklpy00d58vkwcsin2n-simple-blue-2016-02-19/share/backgrounds/nixos/nix-wallpaper-simple-blue.png'
-primary-color='#3a4ba0'
-secondary-color='#2f302f'
+picture-uri='file:///home/whiisper/.local/share/backgrounds/2026-04-11-16-41-55-asya'
+primary-color='#000000000000'
+secondary-color='#000000000000'
 
 [org/gnome/desktop/search-providers]
 sort-order=['org.gnome.Settings.desktop', 'org.gnome.Contacts.desktop', 'org.gnome.Nautilus.desktop']
@@ -108,16 +136,56 @@ default-folder-viewer='icon-view'
 migrated-gtk-settings=true
 
 [org/gnome/nautilus/window-state]
-maximized=true
+initial-size=(1334, 806)
+initial-size-file-chooser=(890, 550)
+maximized=false
+
+[org/gnome/portal/filechooser/org.chromium.Chromium]
+last-folder-path='/home/whiisper/Documents/zig-x86_64-linux-0.16.0-dev.3061+9b1eaad13/ziglings'
+
+[org/gnome/portal/filechooser/org.gnome.Nautilus]
+last-folder-path='/home/whiisper/nixos-config/shrieking-legiana'
+
+[org/gnome/portal/filechooser/org.gnome.Settings]
+last-folder-path='/home/whiisper/Desktop'
 
 [org/gnome/settings-daemon/plugins/color]
 night-light-schedule-automatic=false
 
+[org/gnome/settings-daemon/plugins/housekeeping]
+donation-reminder-last-shown=int64 1775913881826674
+
+[org/gnome/settings-daemon/plugins/media-keys]
+custom-keybindings=['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']
+
+[org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0]
+binding='<Super>t'
+command='blackbox'
+name='Run blackbox'
+
 [org/gnome/shell]
+enabled-extensions=['clipboard-history@alexsaveau.dev']
 welcome-dialog-last-shown-version='49.2'
+
+[org/gnome/shell/extensions/clipboard-history]
+window-width-percentage=23
 
 [org/gnome/shell/world-clocks]
 locations=@av []
 
 [org/gtk/gtk4/settings/file-chooser]
-show-hidden=true
+show-hidden=false
+
+[org/gtk/settings/file-chooser]
+date-format='regular'
+location-mode='path-bar'
+show-hidden=false
+show-size-column=true
+show-type-column=true
+sidebar-width=167
+sort-column='name'
+sort-directories-first=false
+sort-order='ascending'
+type-format='category'
+window-position=(338, 71)
+window-size=(1203, 902)
