@@ -33,7 +33,7 @@
     ];
   };
 
-  services.xwayland.enable = true;
+  programs.xwayland.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
