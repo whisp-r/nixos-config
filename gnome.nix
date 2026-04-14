@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{pkgs, ... }:
 
 {
   services.displayManager.gdm.enable = true;
@@ -16,5 +16,10 @@
   environment.systemPackages = with pkgs; [
     gnomeExtensions.clipboard-history
     gnomeExtensions.appindicator
+    gnomeExtensions.hibernate-status-button
+  ] ++ [
+    blackbox-terminal
+
+    
   ];
 }
