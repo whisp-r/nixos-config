@@ -1,6 +1,5 @@
 {
   pkgs,
-  username,
   ...
 }:
 {
@@ -10,7 +9,9 @@
     ../printer.nix
     ../locale.nix
     ../kde.nix
+    # ../plasma-login.nix
     ../sddm.nix
+    # ../gnome.nix
     ../environment.nix
     ../experimental.nix
 
@@ -31,6 +32,8 @@
       # (pkgs.runCommand "steamrun-lib" {} "mkdir $out; ln -s ${pkgs.steam-run.fhsenv}/usr/lib64 $out/lib")
     ];
   };
+
+  services.xwayland.enable = true;
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
@@ -55,11 +58,9 @@
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      # normal fonts
       liberation_ttf
       fragment-mono
 
-      # nerd-fonts
       nerd-fonts.symbols-only
       nerd-fonts.jetbrains-mono
     ];

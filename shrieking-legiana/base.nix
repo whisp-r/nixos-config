@@ -1,6 +1,5 @@
 {
   pkgs,
-  username,
   ...
 }:
 {
@@ -34,6 +33,8 @@
     ];
   };
 
+  services.xwayland.enable = true;
+
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
@@ -54,16 +55,12 @@
   # Firmware updating/settings
   # services.fwupd.enable = true;
 
-  # services.xwayland.enable = true;
-
   fonts = {
     enableDefaultPackages = true;
     packages = with pkgs; [
-      # normal fonts
       liberation_ttf
       fragment-mono
 
-      # nerd-fonts
       nerd-fonts.symbols-only
       nerd-fonts.jetbrains-mono
     ];
