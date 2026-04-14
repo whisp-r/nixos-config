@@ -14,7 +14,6 @@
 
   outputs =
     {
-      self,
       nixpkgs,
       nix-maid,
       ...
