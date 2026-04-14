@@ -18,6 +18,7 @@
     [
       gnomeExtensions.clipboard-history
       gnomeExtensions.appindicator
+      gnomeExtensions.keep-awake
       gnomeExtensions.hibernate-status-button
     ]
     ++ [
