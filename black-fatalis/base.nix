@@ -11,7 +11,7 @@
     # ../kde.nix
     # ../plasma-login.nix
     # ../sddm.nix
-    # ../plymouth.nix
+    ../plymouth.nix
     ../gnome.nix
     ../environment.nix
     ../experimental.nix
