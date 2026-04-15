@@ -20,9 +20,7 @@
     }@inputs:
     let
       username = "whiisper";
-      system = "x86_64-linux";
-
-      specialArgs = { inherit inputs username system; };
+      specialArgs = { inherit inputs username; };
     in
     {
       nixosConfigurations = {
@@ -35,7 +33,7 @@
             inherit specialArgs;
 
             modules = [
-              { nixpkgs.hostPlatform = system; }
+              # { nixpkgs.hostPlatform = system; } # defined in hardware config
               { networking.hostName = hostname; }
 
               ./${hostname}/hardware-configuration.nix
@@ -54,7 +52,6 @@
             inherit specialArgs;
 
             modules = [
-              { nixpkgs.hostPlatform = system; }
               { networking.hostName = hostname; }
 
               ./${hostname}/hardware-configuration.nix
