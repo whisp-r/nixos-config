@@ -20,7 +20,7 @@
     # ../sddm.nix
 
     ../plymouth.nix
-    # ../autologin.nix
+    ../autologin.nix
 
     ../shared-packages.nix
     ./packages.nix
