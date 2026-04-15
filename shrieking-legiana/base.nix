@@ -5,16 +5,22 @@
 {
   imports = [
     ../user.nix
+    ../experimental.nix
+
     ../sound.nix
     # ../printer.nix
+
     ../locale.nix
+    ../environment.nix
+
     # ../kde.nix
+    ../gnome.nix
+
     # ../plasma-login.nix
     # ../sddm.nix
+
     ../plymouth.nix
-    ../gnome.nix
-    ../environment.nix
-    ../experimental.nix
+    ../autologin.nix
 
     ../shared-packages.nix
     ./packages.nix
