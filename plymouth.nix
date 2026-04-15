@@ -1,22 +1,27 @@
 { pkgs, ... }:
 
-# https://discourse.nixos.org/t/how-to-configure-a-graphical-boot-screen-with-luks-unlock/63357
 {
   boot = {
 
-    # plymouth = {
-    #   enable = true;
-    #   # theme = "rings";
-    #   # themePackages = with pkgs; [
-    #   #   # By default we would install all themes
-    #   #   (adi1090x-plymouth-themes.override {
-    #   #     selected_themes = [ "rings" ];
-    #   #   })
-    #   # ];
-    # };
+    # https://wiki.nixos.org/wiki/Plymouth
+    plymouth = {
+      enable = true;
+
+      # https://github.com/adi1090x/plymouth-themes
+      theme = "red_loader";
+      themePackages = with pkgs; [
+        # By default we would install all themes
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "red_loader" ];
+        })
+      ];
+    };
+
+
+    # https://discourse.nixos.org/t/how-to-configure-a-graphical-boot-screen-with-luks-unlock/63357
 
     # plymouth, showing after LUKS unlock
-    plymouth.enable = true;
+    # plymouth.enable = true;
     # plymouth.font = "${pkgs.hack-font}/share/fonts/truetype/Hack-Regular.ttf";
     # plymouth.logo = "${pkgs.nixos-icons}/share/icons/hicolor/128x128/apps/nix-snowflake.png";
 
