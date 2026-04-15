@@ -1,12 +1,11 @@
 {
   pkgs,
-  system,
   inputs,
   ...
 }:
 
 let
-  edu-sync-cli = inputs.edu-sync-nix.packages.${system}.default;
+  edu-sync-cli = inputs.edu-sync-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
   environment.systemPackages =
