@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-stable.url = "github:NixOS/nixpkgs/nixos-25.11";
 
     nix-maid.url = "github:viperML/nix-maid";
 
@@ -15,12 +16,20 @@
   outputs =
     {
       nixpkgs,
+      nixpkgs-stable,
       nix-maid,
       ...
     }@inputs:
     let
       username = "whiisper";
-      specialArgs = { inherit inputs username; };
+
+      pkgs-stable = import nixpkgs-stable {
+        system = "x86_64-linux";
+        # To use Chrome, we need to allow the
+        # installation of non-free software.
+        config.allowUnfree = true;
+      };
+      specialArgs = { inherit inputs username pkgs-stable; };
     in
     {
       nixosConfigurations = {
