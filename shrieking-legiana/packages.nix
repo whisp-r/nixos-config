@@ -1,6 +1,5 @@
 {
   pkgs,
-  pkgs-stable,
   inputs,
   ...
 }:
@@ -15,13 +14,10 @@ in
       vesktop
       zig
       zls
-      # ghostty
     ]
     ++ [
       # custom packages
       edu-sync-cli
-    ] ++ [
-      pkgs-stable.ghostty
     ];
 
   programs = {
