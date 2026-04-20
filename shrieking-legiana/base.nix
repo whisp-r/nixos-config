@@ -19,7 +19,7 @@
     # ../plasma-login.nix
     # ../sddm.nix
 
-    ../plymouth.nix
+    # ../plymouth.nix
     ../autologin.nix
 
     ../shared-packages.nix
