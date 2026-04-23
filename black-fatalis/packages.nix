@@ -16,7 +16,7 @@ in
       vesktop
 
       zed-editor-fhs
-      android-studio-full
+      # android-studio-full
     ]
     ++ [
       # custom packages
@@ -35,5 +35,5 @@ in
     # };
   };
 
-  nixpkgs.config.android_sdk.accept_license = true;
+  # nixpkgs.config.android_sdk.accept_license = true;
 }
