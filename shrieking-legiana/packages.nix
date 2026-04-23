@@ -14,6 +14,7 @@ in
       vesktop
       zig
       zls
+      firefox-devedition
     ]
     ++ [
       # custom packages
