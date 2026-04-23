@@ -16,6 +16,7 @@ in
       vesktop
 
       zed-editor-fhs
+      android-studio-full
     ]
     ++ [
       # custom packages
@@ -33,4 +34,6 @@ in
     #   localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
     # };
   };
+
+  nixpkgs.config.android_sdk.accept_license = true;
 }

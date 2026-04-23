@@ -15,7 +15,7 @@ in
       zig
       zls
       firefox-devedition
-      android-studio-full
+      # android-studio-full
     ]
     ++ [
       # custom packages
@@ -26,5 +26,5 @@ in
     thunderbird.enable = true;
   };
 
-  nixpkgs.config.android_sdk.accept_license = true;
+  # nixpkgs.config.android_sdk.accept_license = true;
 }
