@@ -20,6 +20,7 @@
       gnomeExtensions.appindicator
       gnomeExtensions.keep-awake
       gnomeExtensions.hibernate-status-button
+      gnomeExtensions.iso-clock
     ]
     ++ [
       blackbox-terminal
