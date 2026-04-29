@@ -10,7 +10,7 @@
     extraGroups = [
       "wheel"
       "networkmanager"
-      "docker"
+      "vboxsf"
     ]; 
     shell = pkgs.fish;
     maid = ./maid.nix;
