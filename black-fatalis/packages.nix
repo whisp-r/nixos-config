@@ -17,6 +17,7 @@ in
 
       zed-editor-fhs
       # android-studio
+      firefox-devedition
       devenv
     ]
     ++ [
