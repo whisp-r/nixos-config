@@ -18,6 +18,7 @@ in
       zed-editor-fhs
       firefox-devedition
       devenv
+      ghostty
     ]
     ++ [
       # custom packages
