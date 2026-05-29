@@ -29,6 +29,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  hardware.graphics.enable = true;
 
   # Allow NixOS to run unpatched executables
   programs.nix-ld = {
