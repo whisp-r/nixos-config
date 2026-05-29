@@ -16,6 +16,7 @@ in
       vesktop
 
       zed-editor-fhs
+      firefox-devedition
       devenv
     ]
     ++ [
