@@ -21,6 +21,7 @@
 
     # ../plymouth.nix
     ../autologin.nix
+    ../sudo-rs.nix
 
     ../shared-packages.nix
     ./packages.nix
