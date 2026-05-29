@@ -26,11 +26,6 @@
     ./packages.nix
   ];
 
-  # security.sudo = {
-  #   enable = true;
-  #   wheelNeedsPassword = false;
-  # }; # dosent work
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
