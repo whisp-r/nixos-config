@@ -23,6 +23,6 @@
       gnomeExtensions.iso-clock
     ]
     ++ [
-      blackbox-terminal
+      (blackbox-terminal.override { sixelSupport = true; })
     ];
 }
