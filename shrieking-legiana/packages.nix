@@ -20,7 +20,7 @@ in
     ]
     ++ [
       # custom packages
-      edu-sync-cli
+      # edu-sync-cli
     ];
 
   programs = {
