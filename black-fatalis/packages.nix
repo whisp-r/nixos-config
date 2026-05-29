@@ -16,16 +16,12 @@ in
       vesktop
 
       zed-editor-fhs
-      # android-studio
-      firefox-devedition
       devenv
     ]
     ++ [
       # custom packages
       edu-sync-cli
     ];
-
-  nixpkgs.config.android_sdk.accept_license = true;
 
   programs = {
     thunderbird.enable = true;
