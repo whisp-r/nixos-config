@@ -24,6 +24,5 @@
     ]
     ++ [
       blackbox-terminal
-      # (blackbox-terminal.override { sixelSupport = true; })
     ];
 }
