@@ -80,5 +80,6 @@
     mpv
     vscode-fhs
     onlyoffice-desktopeditors
+    wezterm
   ];
 }
