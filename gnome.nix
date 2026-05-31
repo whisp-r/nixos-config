@@ -19,7 +19,7 @@
       gnomeExtensions.clipboard-history
       gnomeExtensions.appindicator
       gnomeExtensions.keep-awake
-      gnomeExtensions.hibernate-status-button
+      # gnomeExtensions.hibernate-status-button
       gnomeExtensions.iso-clock
     ]
     ++ [

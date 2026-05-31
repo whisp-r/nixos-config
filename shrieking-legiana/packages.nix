@@ -16,6 +16,8 @@ in
       zls
       firefox-devedition
       bash-language-server
+      # ghostty
+      jj
     ]
     ++ [
       # custom packages
