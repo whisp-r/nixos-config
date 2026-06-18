@@ -17,7 +17,8 @@ in
       firefox-devedition
       bash-language-server
       # ghostty
-      jj
+      jujutsu
+      imhex
     ]
     ++ [
       # custom packages
