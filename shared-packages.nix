@@ -44,7 +44,6 @@
     unzip
     p7zip # 7z
     rar
-    rar2fs
 
     nixfmt
     nixd
