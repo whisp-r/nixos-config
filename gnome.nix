@@ -24,5 +24,6 @@
     ]
     ++ [
       blackbox-terminal
+      gnome-frog
     ];
 }
