@@ -5,6 +5,7 @@
 }:
 
 let
+  whisp = pkgs.callPackage ../custom-packages/whisp/default.nix;
   edu-sync-cli = inputs.edu-sync-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
@@ -23,6 +24,7 @@ in
     ++ [
       # custom packages
       edu-sync-cli
+      whisp
     ];
 
   programs = {
