@@ -5,7 +5,7 @@
 }:
 
 let
-  whisp = pkgs.callPackage ../custom-packages/whisp/default.nix;
+  whisp = pkgs.callPackage ../custom-packages/whisp {};
   edu-sync-cli = inputs.edu-sync-nix.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in
 {
