@@ -8,22 +8,23 @@
   services.gnome.core-developer-tools.enable = false;
   services.gnome.games.enable = false;
 
-  environment.gnome.excludePackages = with pkgs; [
-    # gnome-tour
-    # gnome-user-docs
-  ];
+  # environment.gnome.excludePackages = with pkgs; [
+  #    gnome-tour
+  #    gnome-user-docs
+  # ];
 
   environment.systemPackages =
     with pkgs;
     [
-      gnomeExtensions.clipboard-history
       gnomeExtensions.appindicator
-      gnomeExtensions.keep-awake
-      # gnomeExtensions.hibernate-status-button
+      gnomeExtensions.clipboard-indicator
+      gnomeExtensions.caffeine
+
       gnomeExtensions.iso-clock
+      gnomeExtensions.blur-my-shell
     ]
     ++ [
-      blackbox-terminal
+      # blackbox-terminal
       gnome-frog
     ];
 }
