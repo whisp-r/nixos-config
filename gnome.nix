@@ -18,7 +18,7 @@
     [
       gnomeExtensions.appindicator
       gnomeExtensions.clipboard-indicator
-      gnomeExtensions.caffeine
+      # gnomeExtensions.caffeine
 
       gnomeExtensions.iso-clock
       gnomeExtensions.blur-my-shell
