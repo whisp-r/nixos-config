@@ -20,6 +20,11 @@ in
       # ghostty
       jujutsu
       imhex
+
+      keepassxc
+      mpv
+      vscode-fhs
+      onlyoffice-desktopeditors
     ]
     ++ [
       # custom packages
@@ -29,5 +34,13 @@ in
 
   programs = {
     thunderbird.enable = true;
+
+    firefox = {
+      enable = true;
+      preferences = {
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+      };
+    };
+
   };
 }

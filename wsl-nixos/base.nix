@@ -7,22 +7,22 @@
     ../user.nix
     ../experimental.nix
 
-    ../sound.nix
-    ../printer.nix
+    # ../sound.nix
+    # ../printer.nix
 
     ../locale.nix
     ../environment.nix
     ../nix-ld.nix
 
-    ../wayland.nix
+    # ../wayland.nix
     # ../kde.nix
-    ../gnome.nix
+    # ../gnome.nix
 
     # ../plasma-login.nix
     # ../sddm.nix
 
-    ../plymouth.nix
-    ../autologin.nix
+    # ../plymouth.nix
+    # ../autologin.nix
     ../sudo-rs.nix
 
     ../shared-packages.nix
@@ -42,25 +42,4 @@
     enable = true;
     enableSSHSupport = true;
   };
-
-  # Polkit
-  security.polkit.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
-
-  # Firmware updating/settings
-  services.fwupd.enable = true;
-
-  fonts = {
-    enableDefaultPackages = true;
-    packages = with pkgs; [
-      liberation_ttf
-      fragment-mono
-
-      nerd-fonts.symbols-only
-      nerd-fonts.jetbrains-mono
-    ];
-  };
-
 }

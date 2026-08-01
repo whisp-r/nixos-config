@@ -31,6 +31,13 @@ in
     thunderbird.enable = true;
     localsend.enable = true;
 
+    firefox = {
+      enable = true;
+      preferences = {
+        "widget.use-xdg-desktop-portal.file-picker" = 1;
+      };
+    };
+
     # steam = {
     #   enable = true;
     #   remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play

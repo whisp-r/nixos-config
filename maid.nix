@@ -6,7 +6,7 @@
 }:
 
 let
-  repo_location = "{{home}}/nixos-config";
+  repo_location = "{{home}}/infra";
   dotfiles_location = "${repo_location}/dotfiles";
 in
 {

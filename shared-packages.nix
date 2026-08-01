@@ -9,13 +9,6 @@
   };
 
   programs = {
-    firefox = {
-      enable = true;
-      preferences = {
-        "widget.use-xdg-desktop-portal.file-picker" = 1;
-      };
-    };
-
     fish = {
       enable = true;
     };
@@ -38,9 +31,6 @@
   };
 
   environment.systemPackages = with pkgs; [
-    wayland-utils
-    wl-clipboard
-
     unzip
     p7zip # 7z
     rar
@@ -73,11 +63,5 @@
     helix
 
     yazi
-
-    # gui
-    keepassxc
-    mpv
-    vscode-fhs
-    onlyoffice-desktopeditors
   ];
 }
