@@ -4,7 +4,7 @@
   # Enable CUPS to print documents.
   services.printing = {
     enable = true;
-    cups-pdf.enable = true;
+    # cups-pdf.enable = true;
     browsed.enable = true;
     drivers = with pkgs; [
       gutenprint
