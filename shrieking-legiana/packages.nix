@@ -12,6 +12,8 @@ in
   environment.systemPackages =
     with pkgs;
     [
+      mangohud
+      gamemode
       vesktop
       zig
       zls
